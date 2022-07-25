@@ -17,8 +17,9 @@ jobs:
       uses: github/super-linter@v4.9.4
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x
+      env:
+         FILTER_REGEX_INCLUDE: .*src/.*  
+        
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
