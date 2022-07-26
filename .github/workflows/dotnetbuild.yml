@@ -22,14 +22,14 @@ jobs:
     - name: Install Sonar global tool
       run: dotnet tool install --global dotnet-sonarscanner
     - name: Begin Sonar scan
-      run: dotnet sonarscanner begin /k:"MySonarProject" /d:sonar.login=${{ secrets.SONAR_TOKEN }} /d:sonar.host.url=${{ secrets.SONAR_HOST_URL }}
+      run: dotnet sonarscanner begin /k:"AkkiTestGithub" /d:sonar.login=${{ secrets.SONAR_TOKEN }} /d:sonar.host.url=${{ secrets.SONAR_HOST_URL }}
       
     - name: Build and run unit tests
       run: |
         dotnet restore 
         dotnet build --no-restore
     - name: End Sonar scan
-      run: dotnet sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }}	/d:sonar.host.url=${{ secrets.SONAR_HOST_URL }}	    
+      run: dotnet sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }} 
     #- name: Official SonarQube Scan
     #  uses: SonarSource/sonarqube-scan-action@v1.1.0
     #  env:
