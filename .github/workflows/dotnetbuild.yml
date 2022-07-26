@@ -13,12 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Super-Linter
-      uses: github/super-linter@v4.9.4
-    #- name: Setup .NET
-    #  uses: actions/setup-dotnet@v2
-    #  env:
-    #     FILTER_REGEX_INCLUDE: .*src/.*  
+    #- name: Super-Linter
+    #  uses: github/super-linter@v4.9.4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
     
     - name: Official SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v1.1.0
