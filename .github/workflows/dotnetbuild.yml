@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: test
+      run: curl -v http://localhost:9000
     #- name: Super-Linter
     #  uses: github/super-linter@v4.9.4
     - name: Setup .NET
