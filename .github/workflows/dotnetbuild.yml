@@ -43,5 +43,5 @@ jobs:
     - name:  Publish
       run: dotnet publish 
     - name:  Run Dotnet app
-      run: dotnet ${{ github.workspace }}/bin/Debug/net6.0/MyWebApp.dll &  
+      run: RUNNER_TRACKING_ID="" && (nohup dotnet ${{ github.workspace }}/bin/Debug/net6.0/MyWebApp.dll &  )
     
