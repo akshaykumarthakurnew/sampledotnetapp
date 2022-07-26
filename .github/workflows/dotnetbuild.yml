@@ -45,4 +45,4 @@ jobs:
     - name:  Publish
       run: dotnet publish 
     - name:  Run Dotnet app
-      run: dotnet run & 
+      run: dotnet MyWebApp.dll &
