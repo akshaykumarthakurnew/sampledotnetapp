@@ -19,8 +19,8 @@ jobs:
     #  uses: github/super-linter@v4.9.4
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
-    - name: Install Sonar global tool
-      run: dotnet tool install --global dotnet-sonarscanner
+    #- name: Install Sonar global tool
+    #  run: dotnet tool install --global dotnet-sonarscanner
     - name: Begin Sonar scan
       run: dotnet sonarscanner begin /k:"AkkiTestGithub" /d:sonar.login=${{ secrets.SONAR_TOKEN }} /d:sonar.host.url=${{ secrets.SONAR_HOST_URL }}
       
