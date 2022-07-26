@@ -44,3 +44,5 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name:  Publish
       run: dotnet publish 
+    - name:  Run Dotnet app
+      run: dotnet run & 
